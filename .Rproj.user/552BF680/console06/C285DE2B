@@ -1,0 +1,14 @@
+]0;~/Dropbox (MIT)/MTR/DemandPackage[?1034hPeymans-MacBook-Pro:DemandPackage peyman$ [KPeymans-MacBook-Pro:DemandPackage peyman$ ls 
+DESCRIPTION.R		app.R
+DemandPackage.Rproj	models
+]0;~/Dropbox (MIT)/MTR/DemandPackagePeymans-MacBook-Pro:DemandPackage peyman$ ls -a
+.			DESCRIPTION.R		models
+..			DemandPackage.Rproj
+.Rproj.user		app.R
+]0;~/Dropbox (MIT)/MTR/DemandPackagePeymans-MacBook-Pro:DemandPackage peyman$ ls
+DESCRIPTION		DemandPackage.Rproj	models
+DESCRIPTION.R		app.R
+ls
+DESCRIPTION		app.R
+DemandPackage.Rproj	models
+]0;~/Dropbox (MIT)/MTR/DemandPackagePeymans-MacBook-Pro:DemandPackage peyman$ DESCRIPTION DESCRIPTION[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
