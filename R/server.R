@@ -104,7 +104,9 @@ server <- function(input, output, session) {
       print(isolate(values$station_id));
       print(paste0(getwd()))
       print(paste0( system.file("ShinyApp", package = "MTRdemand")))
+      setwd(system.file("ShinyApp", package = "MTRdemand"))
       print(paste0(here::here()))
+      print(paste0(getwd()))
       # print(isolate(head(values$df_data)));
     })
   }, ignoreNULL=FALSE, ignoreInit=TRUE
@@ -223,12 +225,12 @@ server <- function(input, output, session) {
     ##############################
     # read the model and mean/std
     ##############################
-    model_path <- paste0("models/my_model_station_", as.character(values$station_id), ".h5")
+    model_path <- paste0("./models/my_model_station_", as.character(values$station_id), ".h5")
     model <- keras::load_model_hdf5(model_path)
     
-    hist_avg <- readRDS(paste0("models/station_", as.character(values$station_id),"_hist_avg.rds"))
+    hist_avg <- readRDS(paste0("./models/station_", as.character(values$station_id),"_hist_avg.rds"))
     values$hist <-  hist_avg$demand[-c(1:5)]
-    mean_std <- readRDS(paste0("models/mean_std_", as.character(values$station_id),".rds"))
+    mean_std <- readRDS(paste0("./models/mean_std_", as.character(values$station_id),".rds"))
     
     training_mean <- mean_std$m
     training_std <- mean_std$std
