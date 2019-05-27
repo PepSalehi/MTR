@@ -103,7 +103,7 @@ server <- function(input, output, session) {
       print(isolate(values$station_name));
       print(isolate(values$station_id));
       print(paste0(getwd()))
-      print(paste0("./models/my_model_station_", as.character(values$station_id), ".h5"))
+      print(paste0( system.file("ShinyApp", package = "MTRdemand")))
       print(paste0(here::here()))
       # print(isolate(head(values$df_data)));
     })
