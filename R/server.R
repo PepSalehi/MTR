@@ -102,8 +102,8 @@ server <- function(input, output, session) {
       # summary(values$df_data)
       print(isolate(values$station_name));
       print(isolate(values$station_id));
-      # print(paste0(getwd()))
-      # print(paste0("./models/my_model_station_", as.character(values$station_id), ".h5"))
+      print(paste0(getwd()))
+      print(paste0("./models/my_model_station_", as.character(values$station_id), ".h5"))
       # print(isolate(head(values$df_data)));
     })
   }, ignoreNULL=FALSE, ignoreInit=TRUE
