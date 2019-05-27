@@ -102,6 +102,8 @@ server <- function(input, output, session) {
       # summary(values$df_data)
       print(isolate(values$station_name));
       print(isolate(values$station_id));
+      # print(paste0(getwd()))
+      # print(paste0("./models/my_model_station_", as.character(values$station_id), ".h5"))
       # print(isolate(head(values$df_data)));
     })
   }, ignoreNULL=FALSE, ignoreInit=TRUE
@@ -123,7 +125,12 @@ server <- function(input, output, session) {
   
   
   observeEvent(input$pre, {
-    
+    output$sum <- renderPrint({
+      # print(isolate(head(values$df)));
+      print(paste0(getwd()))
+      # print(model %>% summary())
+      
+    })
     # to fill the missing values
     all_time_bins_template <- 
       tibble(
@@ -211,6 +218,7 @@ server <- function(input, output, session) {
   
   
   observeEvent(input$pred, {
+   
     ##############################
     # read the model and mean/std
     ##############################
