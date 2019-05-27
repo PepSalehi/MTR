@@ -4,5 +4,5 @@ if (appDir == "") {
 }
 setwd(appDir)
 shiny::shinyAppDir(".")
-shiny::runApp(appDir, display.mode = "normal")
-# DemandPackage::launchApp()
+# shiny::runApp(appDir, display.mode = "normal")
+DemandPackage::launchApp()
